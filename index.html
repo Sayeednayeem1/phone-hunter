@@ -17,7 +17,8 @@
         <section>
             <div class="mb-3 w-50">
                 <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input id="search-field" type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input id="search-field" type="email" class="form-control" id="exampleFormControlInput1"
+                    placeholder="name@example.com">
                 <button id="btn-search" class=" btn btn-primary">Search</button>
             </div>
         </section>
@@ -27,6 +28,16 @@
             </div>
             <div id="no-found-message" class="mt-4 d-none">
                 <h3 class="text-danger">No phone found. Please search a valid phone name.</h3>
+            </div>
+        </section>
+
+        <!-- loader/spinner section -->
+
+        <section id="loader" class="d-none">
+            <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-success" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
             </div>
         </section>
     </main>

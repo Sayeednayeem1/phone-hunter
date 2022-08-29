@@ -10,7 +10,7 @@ const displayPhones = phones =>{
     phoneContainer.textContent = '';
 
     // display number how many phone you wanna show
-    phones = phones.slice(0,5);
+    phones = phones.slice(0,10);
     // display no phones found
     const notFound = document.getElementById('no-found-message');
     if(phones.length === 0){
@@ -32,14 +32,28 @@ const displayPhones = phones =>{
          </div>
         `;
         phoneContainer.appendChild(phoneDiv);
-    })
+    });
+    // stop loader
+    toggleSpinner(false);
 }
 
 document.getElementById('btn-search').addEventListener('click', function(){
+    // start loader
+    toggleSpinner(true);
     const searchField = document.getElementById("search-field");
     const searchText = searchField.value;
     loadPhone(searchText);
 
 })
+
+const toggleSpinner = isLoading =>{
+    const loaderSection = document.getElementById("loader");
+    if(isLoading){
+        loaderSection.classList.remove('d-none');
+    }
+    else{
+        loaderSection.classList.add("d-none");
+    }
+}
 
 loadPhone('iphone');
