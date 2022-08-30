@@ -29,6 +29,9 @@
             <div id="no-found-message" class="mt-4 d-none">
                 <h3 class="text-danger">No phone found. Please search a valid phone name.</h3>
             </div>
+            <div id="show-all" class="text-center d-none">
+                <div id="btn-show-all" class="btn btn-primary">Show All </div>
+            </div>
         </section>
 
         <!-- loader/spinner section -->
@@ -37,6 +40,28 @@
             <div style="height: 400px;" class="d-flex justify-content-center align-items-center">
                 <div class="spinner-border text-success" role="status">
                     <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </section>
+        <!-- modal content -->
+        <section>
+            <!-- Button trigger modal -->
+            <!-- Modal -->
+            <div class="modal fade" id="phoneDetailModal" tabindex="-1" aria-labelledby="phoneDetailModal"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="phoneDetailModal"></h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div id="phone-details" class="modal-body">
+                            
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
